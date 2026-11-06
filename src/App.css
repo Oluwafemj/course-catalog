@@ -1,0 +1,438 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #172033;
+  background: #f7f8fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  min-height: 76px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e8eaf0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  color: #172033;
+}
+
+.logo span {
+  color: #635bff;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  color: #647084;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #635bff;
+}
+
+/* =========================
+   PAGE CONTAINER
+========================= */
+
+.page-container {
+  width: 84%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 65px 0;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  text-align: center;
+  padding: 65px 20px 75px;
+  background: linear-gradient(135deg, #eeedff, #f8f7ff);
+  border-radius: 22px;
+  margin-bottom: 65px;
+}
+
+.hero-label {
+  color: #635bff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(34px, 5vw, 54px);
+  font-weight: 800;
+  margin-bottom: 18px;
+  color: #172033;
+}
+
+.hero h1 span {
+  color: #635bff;
+}
+
+.hero-description {
+  max-width: 570px;
+  margin: 0 auto;
+  color: #647084;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.courses-section {
+  width: 100%;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.section-heading p {
+  color: #7a8495;
+  font-size: 14px;
+}
+
+.course-count {
+  background: #eeedff;
+  color: #635bff;
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================
+   COURSE GRID
+========================= */
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 230px;
+  padding: 27px;
+  background: #ffffff;
+  border: 1px solid #e9ebf2;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(31, 41, 75, 0.09);
+  border-color: #d9d6ff;
+}
+
+.category-badge {
+  display: inline-block;
+  background: #eeedff;
+  color: #635bff;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.course-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.course-duration {
+  color: #778195;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.course-duration span {
+  font-weight: 700;
+  color: #414c60;
+}
+
+.view-course {
+  color: #635bff;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: auto;
+}
+
+/* =========================
+   CATEGORY PAGE
+========================= */
+
+.category-header {
+  margin-bottom: 40px;
+}
+
+.category-header h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.category-header > p:last-child {
+  color: #778195;
+  line-height: 1.7;
+}
+
+/* =========================
+   COURSE DETAIL PAGE
+========================= */
+
+.back-button {
+  background: none;
+  border: none;
+  color: #635bff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.back-button:hover {
+  color: #4239d9;
+}
+
+.detail-header {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  border: 1px solid #e9ebf2;
+}
+
+.detail-header h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(30px, 4vw, 42px);
+  margin-bottom: 15px;
+}
+
+.detail-description {
+  color: #647084;
+  line-height: 1.9;
+  margin-top: 20px;
+  max-width: 800px;
+}
+
+.topics-section {
+  margin-top: 40px;
+  padding: 35px;
+  background: #ffffff;
+  border: 1px solid #e9ebf2;
+  border-radius: 18px;
+}
+
+.topics-section h2 {
+  font-family: 'Outfit', sans-serif;
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+
+.topics-section ul {
+  list-style: none;
+}
+
+.topics-section li {
+  padding: 15px 0;
+  border-bottom: 1px solid #edf0f5;
+  color: #596579;
+  font-size: 14px;
+}
+
+.topics-section li::before {
+  content: "✓";
+  color: #635bff;
+  font-weight: 800;
+  margin-right: 12px;
+}
+
+/* =========================
+   NOT FOUND PAGE
+========================= */
+
+.not-found {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.not-found h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 65px;
+  color: #635bff;
+  margin-bottom: 15px;
+}
+
+.not-found h2 {
+  margin-bottom: 15px;
+}
+
+.not-found p {
+  color: #778195;
+  margin-bottom: 25px;
+}
+
+.home-button,
+.not-found button {
+  display: inline-block;
+  padding: 13px 24px;
+  background: #635bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.home-button:hover,
+.not-found button:hover {
+  background: #4239d9;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+  .course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .page-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    min-height: 70px;
+    padding: 0 5%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .page-container {
+    width: 92%;
+    padding: 35px 0;
+  }
+
+  .hero {
+    padding: 45px 18px;
+    margin-bottom: 40px;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .section-heading h2 {
+    font-size: 22px;
+  }
+
+  .course-count {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .category-header h1 {
+    font-size: 32px;
+  }
+
+  .detail-header,
+  .topics-section {
+    padding: 25px;
+  }
+}
